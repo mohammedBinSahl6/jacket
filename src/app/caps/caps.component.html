@@ -1,0 +1,24 @@
+<div class="container mt-5 p-3 shop">
+    <div class="row">
+      <h1 class="h1 text-center h">SHOP NOW</h1>
+    </div>
+    <div class="row">
+      <div class="col colp" *ngFor="let p of caps">
+        <div class="product">
+          <div class="pro-c">
+            <img src="{{p.image}}" alt="{{p.title}}" class="img-pro">
+            <div class="pro-info">
+              <h3 class="title">{{p.title}}</h3>
+              <p class="price">$<span class="price-val">{{p.price}}</span></p>
+            </div>
+            <div class="bar">
+              <span>
+                <i class='bx bxs-cart-add ADD' ></i>
+                <i class='bx bxs-heart LIKE'></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

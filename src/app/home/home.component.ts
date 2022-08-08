@@ -1,18 +1,11 @@
-import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
-
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
-export class AppComponent {
- 
- 
-
- 
-  title = 'jacket';
+export class HomeComponent implements OnInit {
   tshirts = [
     {
       title : 'T-SHIRT GHOST',
@@ -97,4 +90,9 @@ export class AppComponent {
     {title : '11# CAP', id : 11 , image : '../assets/images/cap11', price : 10},
     {title : '12# CAP', id : 12 , image : '../assets/images/cap12', price : 10},
   ];
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
 }

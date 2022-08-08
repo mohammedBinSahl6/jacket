@@ -1,0 +1,21 @@
+.cart{
+    position: fixed;
+    width: 70%;
+    height: 70%;
+    background-color: aliceblue;
+    top: 25%;
+    left: 20%;
+    box-shadow: 10px 10px 40px;
+    
+}
+.cart .close{
+    font-size: 5vh;
+
+}
+.cart-header{
+    display: flex;
+    justify-content:space-between ;
+}
+.cart-header h1{
+    padding: 2vh;
+}
