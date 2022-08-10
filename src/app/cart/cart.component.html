@@ -1,4 +1,4 @@
-<div class="cart">
+<div class="cart container-fluid">
     <div class="row ">
         <div class="cart-header">
             <h1 class="display-3 text-center">My Cart </h1>
@@ -6,6 +6,17 @@
         </div>
     </div>
     <div class="row products">
-        <div class="row productInCart"></div>
+        <div class=" productInCart " *ngFor="let p of products">
+            <img src="{{p.image}}" class="img-cart">
+            <h4 class="title-cart">{{p.title}}</h4>
+            <p class="price">$<span class="price-val">{{p.price}}</span></p>
+            <button class="btn btn-danger remove"(click)="removeItem(p)">Remove</button>
+        </div>
     </div>
+    <button class="btn btn-primary m-3" *ngIf="products.length >0" (click)="emptycart()">Empty</button>
+    <button class="btn btn-primary m-3" *ngIf="products.length >0" routerLink="/check">CHECK</button>
+
+    
+    <h1 class="message text-center" *ngIf="products.length == 0">The Cart is Empty !</h1>
+    <h3 class="total">THE TOTAL IS : $ {{grandTotal}}</h3>
 </div>

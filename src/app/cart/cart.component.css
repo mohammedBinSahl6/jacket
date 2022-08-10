@@ -6,6 +6,7 @@
     top: 25%;
     left: 20%;
     box-shadow: 10px 10px 40px;
+    overflow: scroll;
     
 }
 .cart .close{
@@ -19,3 +20,15 @@
 .cart-header h1{
     padding: 2vh;
 }
+
+.img-cart{
+    width: 20vh;
+}
+.remove{
+    width: 12vh;
+    margin: 2vh 5vh;
+}
+.productInCart{
+    border-bottom: 1px solid;
+}
+

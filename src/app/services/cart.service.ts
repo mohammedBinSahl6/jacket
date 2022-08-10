@@ -7,6 +7,7 @@ import { BehaviorSubject } from 'rxjs';
 export class CartService {
   public cartList : any = [];
   public productList = new BehaviorSubject<any>([]);
+  public fav : any []=[];
   constructor() {}
     getproducts() {
       return this.productList.asObservable();
@@ -24,10 +25,12 @@ export class CartService {
     }
 
     gettotalprice(){
-      let grandTotal = 0;
+      let grandTotal :number= 0;
       this.cartList.map((a:any)=>{
-        grandTotal += a.total;
+        grandTotal += a.price;
+      
       })
+      return grandTotal;
     }
 
     removeCartItem(product : any){
@@ -44,6 +47,18 @@ export class CartService {
     removeAllCart (){
       this.cartList = [];
       this.productList.next(this.cartList);
+    }
+
+    addtoFavorite(product : any){
+      this.fav.push(product);
+    }
+    removefav(product : any ){
+      this.fav.map((a:any , index : any)=>{
+        if (product.id===a.id){
+          this.fav.splice(index , 1);
+        }
+      })
+
     }
    
 }

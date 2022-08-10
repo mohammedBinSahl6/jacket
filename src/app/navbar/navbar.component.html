@@ -9,12 +9,12 @@
       <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="nav nav-tabs">
           <li class="nav-item">
-            <a class="nav-link " routerLinkActive="active" routerLink="/">HOME</a>
+            <a class="nav-link " routerLinkActive="active" routerLink="/home">HOME</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Items</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" routerLinkActive="activeD" routerLink="/">T-SHIRT</a></li>
+              <li><a class="dropdown-item" routerLinkActive="activeD" routerLink="/home">T-SHIRT</a></li>
               <li><a class="dropdown-item" routerLinkActive="activeD" routerLink="/caps">CAP </a></li>
               
             </ul>
@@ -23,7 +23,11 @@
             <a class="nav-link" routerLinkActive="active" routerLink="/about">ABOUT</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " routerLinkActive="active" routerLink="/cart" ><i class='bx bxs-cart' id="cart" ></i></a>
+            <a class="nav-link" routerLinkActive="active" routerLink="/favorites">FAVORITES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " routerLinkActive="active" routerLink="/cart" ><i class='bx bxs-cart' id="cart" ></i>
+            <div class="badge bg-danger">{{totalItems}}</div></a>
           </li>
         </ul>
       </div>

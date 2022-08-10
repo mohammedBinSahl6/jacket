@@ -1,0 +1,16 @@
+<div class="container mt-5 p-3 ">
+    <div class="row">
+        <h1 class="head text-center">YOUR FAVORITE ITEMS </h1>
+    </div>
+    <div class="row mt-5">
+        <div class="col" *ngFor="let p of favorite">
+            <div class="card">
+                <img src="{{p.image}}" alt="pic" class="card-img-top">
+                <div class="card-body">
+                    <h3 class="card-title">{{p.title}}</h3>
+                    <p>$<span>{{p.price}}</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

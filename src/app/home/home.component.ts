@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, importProvidersFrom, OnInit } from '@angular/core';
+import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'app-home',
@@ -90,9 +91,16 @@ export class HomeComponent implements OnInit {
     {title : '11# CAP', id : 11 , image : '../assets/images/cap11', price : 10},
     {title : '12# CAP', id : 12 , image : '../assets/images/cap12', price : 10},
   ];
-  constructor() { }
+  constructor(public cartService : CartService) { }
 
   ngOnInit(): void {
   }
+  addtoCart(item : any){
+    this.cartService.addtoCart(item);
 
+  }
+  addtoFavorite(item : any){
+    this.cartService.addtoFavorite(item);
+  }
+  
 }

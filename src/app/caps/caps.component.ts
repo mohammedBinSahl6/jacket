@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { CartService } from '../services/cart.service';
 @Component({
   selector: 'caps',
   templateUrl: './caps.component.html',
@@ -19,9 +19,13 @@ export class CapsComponent implements OnInit {
     {title : '11# CAP', id : 11 , image : '../assets/images/cap11.jpg', price : 10},
  
   ];
-  constructor() { }
+  constructor(public cartService : CartService) { }
 
   ngOnInit(): void {
   }
 
+  addtoCart(item : any){
+    this.cartService.addtoCart(item);
+
+  }
 }
